@@ -3,5 +3,5 @@
 ```bash
 git clone https://github.com/RickMars-Tech/dotfiles.git
 cd dotfiles
-cp -r config/* ~/.config/ && cp -r .zshrc ~/ && cp -r wal/ ~/
+cp -r config/* ~/.config/ && cp -r wal/ ~/
 ```
