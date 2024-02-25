@@ -24,11 +24,11 @@
         },
         {
             "type": "os",
-            "key": " ╭─" // Just get your distro's logo off nerdfonts.com
+            "key": " ╭─" // Just get your distro's logo off nerdfonts.com
         },
         {
             "type": "kernel",
-            "key": " ├─",
+            "key": " ├─",
             "format": "{1} {2}"
         },
         {
