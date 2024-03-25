@@ -1,21 +1,16 @@
-@define-color back rgba( 14, 14, 23, 0.75);
+@define-color back #1A1A1A;
 @define-color color #CCCCCC;
 @define-color border #0E0E0E;
-@define-color inactive rgba(204, 204, 204, 0.75);
+@define-color inactive #484848;
 @define-color urgent #FFFFFF;
 
 * {
     border: none;
-    border-radius: 0;
+    border-radius: 5px;
     font-family: "DaddyTimeMono", Mono;
     font-weight: Bold;
-    font-size: 14px;
+    font-size: 13px;
     min-height: 0;
-    margin: 0;
-	padding: 0;
-	box-shadow: none;
-	text-shadow: none;
-	icon-shadow: none;
 }
 
 window#waybar {
@@ -28,12 +23,14 @@ tooltip {
     background: @back;
     border-radius: 10px;
     border-width: 2px;
+    border-style: solid;
     border-color: @border;
 }
 
 #workspaces button {
-    padding: 5px 8px;
-    color: @color;
+    background: @back;
+    padding: 4px 8px;
+    color: @inactive;
     margin-left: 1px;
     margin-right: 1px;
 }
@@ -43,6 +40,8 @@ tooltip {
 }
 
 #workspaces button.focused {
+    color: @color;
+    background: @back;
     border-radius: 10px;
    }
 
@@ -65,8 +64,6 @@ tooltip {
 #pulseaudio,
 #network,
 #workspaces,
-#battery,
-#temperature,
 #cpu,
 #memory,
 #gamemode,
@@ -96,25 +93,10 @@ tooltip {
     margin-left: 1px;
 }
 
-#battery {
-    color: @color;
-    background: @back;
-    border-radius: 10px; 
-    margin-right: 5px;
-    margin-left: 1px;
-}
-
-#temperature {
-    color: @color;
-    background: @back;
-    border-radius: 10px; 
-    margin-right: 5px;
-    margin-left: 1px;
-}
-
 #gamemode {
     color: @color;
     background: @back;
+    color: #CCCCCC;
     border-radius: 10px;
     margin-left: 1px;
     margin-right: 1px;
@@ -144,7 +126,7 @@ tooltip {
 #network {
     color: @color;
     background: @back;
-    border-radius: 10px; 
+    border-radius: 10px 10px 10px 10px; 
     border-left: 0px;
     border-right: 0px;
     margin-right: 1px;
@@ -162,6 +144,8 @@ tooltip {
 #clock {
     color: @color;
     background: @back;
-    border-radius: 10px;
-    margin-right: 5px;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-right: 0px;
 }

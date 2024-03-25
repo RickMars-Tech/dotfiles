@@ -1,11 +1,6 @@
-fastfetch 
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
 
-set fish_greeting ""
-
-
-# Aliases
-alias grep "grep --color=auto"
-alias cat "bat --style=plain --paging=never"
-alias ls "eza --all --group-directories-first --grid --icons"
-alias tree "eza -T --all --icons"
-alias ll "eza -l --all --octal-permissions --icons"
+# Created by `pipx` on 2024-03-21 02:50:33
+set PATH $PATH /home/rick/.local/bin

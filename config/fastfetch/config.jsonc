@@ -109,30 +109,6 @@
             "type": "terminal",
             "key": " ╰─"
         },
-        
-	{
-            "type": "custom", // Networking
-	    "format": "├─────[ \u001b[32mNetwork\u001b[0m ]"
-	},
-
-        {
-            "type": "localip",
-            "key": " ╭─󰈀",
-            "compact": true
-        }, 
-        {
-            "type": "publicip",
-            "key": " ├─󰩠"
-        },
-	{
-            "type": "wifi",
-            "key": " ├─",
-            "format": "{4}" // ssid
-        },
-        {
-            "type": "locale",
-            "key": " ╰─"
-        },
 
         {
             "type": "custom", // InformationEnd
