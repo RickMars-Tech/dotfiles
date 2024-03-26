@@ -1,38 +1,29 @@
-@define-color back rgba( 14, 14, 23, 0.75);
+@define-color back rgba( 14, 14, 23, 0.7);
 @define-color color #CCCCCC;
 @define-color border #0E0E0E;
 @define-color inactive rgba(204, 204, 204, 0.75);
 @define-color urgent #FFFFFF;
 
 * {
-    border: none;
-    border-radius: 0;
     font-family: "DaddyTimeMono", Mono;
     font-weight: Bold;
-    font-size: 14px;
+    font-size: 13px;
     min-height: 0;
-    margin: 0;
-	padding: 0;
-	box-shadow: none;
-	text-shadow: none;
-	icon-shadow: none;
 }
 
 window#waybar {
     background: transparent;
-    color: @color;
 }
 
 tooltip {
     color: @color;
     background: @back;
-    border-radius: 10px;
-    border-width: 2px;
     border-color: @border;
+    border-radius: 10px;
+    border-width: 5px;
 }
 
 #workspaces button {
-    padding: 5px 8px;
     color: @color;
     margin-left: 1px;
     margin-right: 1px;
@@ -71,9 +62,9 @@ tooltip {
 #memory,
 #gamemode,
 #tray {
+    padding: 0px 10px;
     color: @color;
     background: @back;
-    padding: 0px 10px;
     margin: 3px 0px;
     margin-top: 10px;
 }
@@ -131,13 +122,13 @@ tooltip {
 #workspaces {
     color: @color;
     background: @back;
-    border-radius: 10px;
+    border-radius: 0px 10px 10px 0px;
 }
 
 #custom-nix {
     color: @color;
     background: @back;
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
     margin-left: 5px;
 }
 

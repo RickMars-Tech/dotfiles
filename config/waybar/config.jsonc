@@ -1,7 +1,5 @@
 {
     "layer": "top",
-    "height": 30,
-    "spacing": 4,
     "position": "top",
     "mode": "dock",
     "exclusive": true,
@@ -23,8 +21,7 @@
         "battery",
 	    "cpu",
 	    "memory",
-        "clock#date",
-		"clock#time"
+		"clock"
     ],
 
     "hyprland/window": {
@@ -98,18 +95,12 @@
 		"tooltip": false
 	},
 
-    "clock#time": {
-		"interval": 10,
-		"format": "{:%H:%M}",
-		"tooltip": false
-	},
-
-	"clock#date": {
-		"interval": 20,
-		"format": "{:%e %b %Y}",
-		"tooltip": false
-		//"tooltip-format": "{:%e %B %Y}"
-	},
+    "clock": {
+      "format": " {:%a, %d %b, %I:%M %p}",
+      "format-alt": " {:%d/%m}",
+      "tooltip": "true",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
 
 	"temperature": {
 		"critical-threshold": 90,
