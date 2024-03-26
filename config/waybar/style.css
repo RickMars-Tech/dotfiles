@@ -7,7 +7,7 @@
 * {
     font-family: "DaddyTimeMono", Mono;
     font-weight: Bold;
-    font-size: 13px;
+    font-size: 14px;
     min-height: 0;
 }
 
@@ -72,19 +72,19 @@ tooltip {
 #cpu {
     color: @color;
     background: @back;
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
     border-left: 0px;
     border-right: 0px;
     margin-left: 1px;
-    margin-right: 1px;
+    margin-right: -1px;
 }
 
 #memory {
     color: @color;
     background: @back;
-    border-radius: 10px; 
+    border-radius: 0px 10px 10px 0px; 
     margin-right: 5px;
-    margin-left: 1px;
+    margin-left: 0px;
 }
 
 #battery {
