@@ -1,0 +1,207 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mode": "dock",
+    "exclusive": true,
+    "height": 0,
+    "modules-left": [
+        "clock",
+	    "hyprland/window"
+    ],
+
+    "modules-center": [
+        "custom/nix",
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+	    "gamemode",
+	    "tray",
+        "network",
+        "cpu",
+	    "memory",
+        "temperature",
+        "battery",
+        "wireplumber",
+        "backlight"
+    ],
+
+    "hyprland/window": {
+	    "format": " /{}",
+	    "tooltip": true,
+	    "separate-outputs": true
+    },
+
+    "hyprland/workspaces": {
+	    "persistent-workspaces":  {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": []
+        },
+	    "format": "{icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "format-icons": {
+		    "active": "󰮯",
+            "default": "󰊠"
+	    }
+    },
+
+    "custom/nix": {
+	    "format": " "
+    },
+
+    "wireplumber": {
+	"    format": "{volume}%",
+	"    format-muted": "",
+	    "on-click": "wpctl"
+    },
+
+    "backlight": {
+	    "format": "{percent}% {icon}",
+	    "format-icons": ["󰃚","󰃛","󰃜","󰃝","󰃞","󰃟","󰃠"],
+        "on-click": "brightnessctl"
+    },
+
+    "gamemode": {
+	    "format": "{glyph}",
+            "format-alt": "{glyph} {count}",
+            "glyph": "",
+            "hide-not-running": true,
+            "use-icon": true,
+            "icon": "nf-fa-gamepad",
+            "icon-spacing": 4,
+            "icon-size": 20
+    },
+
+    "tray": {
+	    "icon-size": 20,
+            "spacing": 10
+    },
+
+    "cpu": {
+		"interval": 5,
+		"tooltip": false,
+		"format": " {usage}%",
+		"format-alt": " {load}",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
+	},
+ 
+    "memory": {
+		"interval": 5,
+		"format": "󰗉 {used:0.1f}G/{total:0.1f}G",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		},
+		"tooltip": false
+	},
+
+	"network": {
+		"interval": 5,
+		"format-wifi": " {essid} ({signalStrength}%)",
+		"format-ethernet": "󰈀 {ifname}",
+		"format-disconnected": "No connection",
+		"format-alt": "󰈀 {ipaddr}/{cidr}",
+		"tooltip": false
+	},
+
+    "clock": {
+      "format": " {:%I:%M}",
+      "format-alt": " {:%d/%m}",
+      "tooltip": "true",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+	"temperature": {
+		"critical-threshold": 90,
+		"interval": 5,
+		"format": "{icon} {temperatureC}°",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+	"battery": {
+		"interval": 10,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format-time": "{H}:{M:02}",
+		"format": "{icon}  {capacity}% ({time})",
+		"format-charging": "󰂄 {capacity}% ({time})",
+		"format-charging-full": " {capacity}%",
+		"format-full": "{icon} {capacity}%",
+		"format-alt": "{icon} {power}W",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+    "custom/arrow1": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow2": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow3": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow4": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow5": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow6": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow7": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow8": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow9": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow10": {
+		"format": "",
+		"tooltip": false
+	}
+}

@@ -1,0 +1,177 @@
+@define-color back rgba( 14, 14, 23, 0.75);
+@define-color color #CCCCCC;
+@define-color borders #0E0E0E;
+@define-color inactives rgba(204, 204, 204, 0.3);
+@define-color urgent #FFFFFF;
+
+
+* {
+    font-family: "DaddyTimeMono", Mono;
+    font-weight: Bold;
+    font-size: 14px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+tooltip {
+    color: @color;
+    background: @back;
+    border-color: @borders;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+#workspaces button {
+    padding: 4px 8px;
+    color: @inactives;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+#workspaces button.active {
+    color: @urgent;
+}
+
+#workspaces button.focused {
+    color: @color;
+    border-radius: 10px;
+   }
+
+#workspaces button.urgent {
+    color: @urgent;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    color: @color;
+    background: @back;
+}
+
+#custom-nix,
+#gamemode,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#workspaces,
+#backlight,
+#wireplumber,
+#battery,
+#temperature,
+#cpu,
+#memory,
+#gamemode,
+#tray {
+    padding: 0px 10px;
+    color: @color;
+    background: @back;
+    margin: 3px 0px;
+    margin-top: 10px;
+}
+
+#wireplumber {
+    color: @color;
+    background: @back;
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 2px;
+    margin-right: -1px;
+}
+
+#backlight {
+    color: @color;
+    background: @back;
+    border-radius: 0px 10px 10px 0px; 
+    margin-right: 2px;
+    margin-left: 0px; 
+}
+
+#cpu {
+    color: @color;
+    background: @back;
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 2px;
+    margin-right: -1px;
+}
+
+#memory {
+    color: @color;
+    background: @back;
+    border-radius: 0px 10px 10px 0px; 
+    margin-right: 2px;
+    margin-left: 0px;
+}
+
+#battery {
+    color: @color;
+    background: @back;
+    border-radius: 0px 10px 10px 0px; 
+    margin-right: 2px;
+    margin-left: 0px;
+}
+
+#temperature {
+    color: @color;
+    background: @back;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: 0px;
+    margin-left: 2px;
+}
+
+#gamemode {
+    color: @color;
+    background: @back;
+    border-radius: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#tray {
+    color: @color;
+    background: @back;
+    border-radius: 10px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+#workspaces {
+    color: @color;
+    background: @back;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 2px;
+}
+
+#custom-nix {
+    color: @color;
+    background: @back;
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 5px;
+}
+
+#network {
+    color: @color;
+    background: @back;
+    border-radius: 10px; 
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+#window {
+    color: @color;
+    background: @back;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+#clock {
+    color: @color;
+    background: @back;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: 0px;
+    margin-left: 5px;
+}
