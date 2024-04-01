@@ -1,0 +1,76 @@
+* { all: unset }
+
+.main {
+    background-color: rgba( 14, 14, 23, 0.8);
+    color: white;
+}
+
+.metric {
+    margin: 4px;
+}
+
+.icon {
+    background-color: #31363c;
+    padding: 4px 10px 4px 8px;
+    border-radius: 10 0 0 10;
+    font-family: 'JetBrainsMonoNL NF';
+}
+
+.info {
+    background-color: #40454b;
+    padding: 4px 6px;
+    border-radius: 0 10 10 0;
+    font-family: 'JetBrainsMonoNL NF';
+}
+
+.nix {
+    background-color: #980098;
+    padding: 0px 15px 0px 8px;
+    border-radius: 0 0 10 0;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 0;
+}
+
+.workspaces button:hover {
+}
+
+.workspaces button {
+    padding: 0px 2px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.workspaces > .current {
+}
+.workspaces {
+    margin-left: 6px;
+}
+
+.exit {
+  padding: 0px 10px 0px 15px;
+  margin: 0 0 0 5;
+  border-radius: 0 0 0 10;
+  background-color: rgb(53, 218, 203);
+  font-family: 'JetBrainsMonoNL NF';
+  font-size: 18px;
+}
+
+.powermenubg {
+    background: rgba(0,0,0,0.5);
+    // border: #0f5248 solid 2px;
+    // background-image: url("blur.jpg");
+}
+
+.powermenufg {
+    background-color: rgba( 14, 14, 23, 0.3);
+    border: #6d6d6d solid 2px;
+    padding: 20px 10px;
+}
+
+.powerbtn {
+    background-color: rgba( 14, 14, 23);
+    border-radius: 15%;
+    margin: 0 10px;
+    font-size: 35px;
+}
