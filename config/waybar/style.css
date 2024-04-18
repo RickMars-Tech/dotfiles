@@ -1,45 +1,47 @@
-@define-color back rgba( 14, 14, 23, 0.7);
-@define-color color #CCCCCC;
-@define-color border #0E0E0E;
-@define-color inactive rgba(204, 204, 204, 0.75);
+@define-color back rgba( 14, 14, 23, 0.75);
+@define-color color #BBBBBB;
+@define-color borders #0E0E0E;
+@define-color inactives rgba(204, 204, 204, 0.3);
 @define-color urgent #FFFFFF;
+
+/* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
 
 * {
     font-family: "DaddyTimeMono", Mono;
     font-weight: Bold;
     font-size: 14px;
-    min-height: 0;
 }
 
 window#waybar {
-    background: transparent;
+    background-color: transparent;
 }
 
-tooltip {
-    color: @color;
-    background: @back;
-    border-color: @border;
-    border-radius: 10px;
-    border-width: 5px;
-}
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
 
 #workspaces button {
-    color: @color;
+    padding: 4px 8px;
+    color: @inactives;
     margin-left: 1px;
     margin-right: 1px;
 }
 
 #workspaces button.active {
     color: @urgent;
+    transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.focused {
+    color: @color;
     border-radius: 10px;
    }
 
 #workspaces button.urgent {
     color: @urgent;
-    background: @back;
     border-radius: 10px;
 }
 
@@ -47,6 +49,27 @@ tooltip {
     color: @color;
     background: @back;
 }
+
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+    color: @color;
+    background: @back;
+    border-color: @borders;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+
+
+
+
+/* -----------------------------------------------------
+ * Custom Quicklinks
+ * ----------------------------------------------------- */
 
 #custom-nix,
 #gamemode,
@@ -56,6 +79,8 @@ tooltip {
 #pulseaudio,
 #network,
 #workspaces,
+#backlight,
+#wireplumber,
 #battery,
 #temperature,
 #cpu,
@@ -69,60 +94,40 @@ tooltip {
     margin-top: 10px;
 }
 
-#cpu {
+
+/* -----------------------------------------------------
+ * Window and Clock
+ * ----------------------------------------------------- */
+
+#window {
+    color: @color;
+    background: @back;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: 0px;
+    margin-right: 5px;
+    padding: 2px 10px 0px 10px;
+    font-size:16px;
+    font-weight:normal;
+}
+
+#clock {
     color: @color;
     background: @back;
     border-radius: 10px 0px 0px 10px;
-    border-left: 0px;
-    border-right: 0px;
-    margin-left: 1px;
-    margin-right: -1px;
-}
-
-#memory {
-    color: @color;
-    background: @back;
-    border-radius: 0px 10px 10px 0px; 
-    margin-right: 5px;
-    margin-left: 0px;
-}
-
-#battery {
-    color: @color;
-    background: @back;
-    border-radius: 10px; 
-    margin-right: 5px;
-    margin-left: 1px;
-}
-
-#temperature {
-    color: @color;
-    background: @back;
-    border-radius: 10px; 
-    margin-right: 5px;
+    margin-right: 0px;
     margin-left: 5px;
 }
 
-#gamemode {
-    color: @color;
-    background: @back;
-    border-radius: 10px;
-    margin-left: 1px;
-    margin-right: 1px;
-}
 
-#tray {
-    color: @color;
-    background: @back;
-    border-radius: 10px;
-    margin-right: 1px;
-    margin-left: 1px;
-}
+/* -----------------------------------------------------
+ * Workspaces and Nix Logo
+ * ----------------------------------------------------- */
 
 #workspaces {
     color: @color;
     background: @back;
     border-radius: 0px 10px 10px 0px;
+    margin-right: 2px;
 }
 
 #custom-nix {
@@ -132,27 +137,105 @@ tooltip {
     margin-left: 5px;
 }
 
+
+/* -----------------------------------------------------
+ * Gamemode
+ * ----------------------------------------------------- */
+
+#gamemode {
+    color: @color;
+    background: @back;
+    border-radius: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+
+#tray {
+    color: @color;
+    background: @back;
+    border-radius: 10px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+
+
+/* -----------------------------------------------------
+ * Network
+ * ----------------------------------------------------- */
+
 #network {
     color: @color;
     background: @back;
     border-radius: 10px; 
     border-left: 0px;
     border-right: 0px;
-    margin-right: 1px;
-    margin-left: 1px;
+    margin-right: 2px;
+    margin-left: 2px;
 }
 
-#window {
+
+/* -----------------------------------------------------
+ * Cpu and Ram
+ * ----------------------------------------------------- */
+
+#cpu {
     color: @color;
     background: @back;
-    border-radius: 10px;
-    margin-left: 1px;
-    margin-right: 1px;
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 2px;
+    margin-right: -1px;
 }
 
-#clock {
+#memory {
     color: @color;
     background: @back;
-    border-radius: 10px;
-    margin-right: 5px;
+    border-radius: 0px 10px 10px 0px; 
+    margin-right: 2px;
+    margin-left: 0px;
+}
+
+/* -----------------------------------------------------
+ * Battery and Temperature
+ * ----------------------------------------------------- */
+
+#battery {
+    color: @color;
+    background: @back;
+    border-radius: 0px 10px 10px 0px; 
+    margin-right: 2px;
+    margin-left: 0px;
+}
+
+#temperature {
+    color: @color;
+    background: @back;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: 0px;
+    margin-left: 2px;
+}
+
+
+/* -----------------------------------------------------
+ * Audio and Backlight
+ * ----------------------------------------------------- */
+
+#wireplumber {
+    color: @color;
+    background: @back;
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 2px;
+    margin-right: -1px;
+}
+
+#backlight {
+    color: @color;
+    background: @back;
+    border-radius: 0px 10px 10px 0px; 
+    margin-right: 2px;
+    margin-left: 0px; 
 }
