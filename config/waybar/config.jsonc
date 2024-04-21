@@ -3,10 +3,9 @@
 // Modules
 //--------------------------
     "layer": "top",
-    "position": "top",
-    "mode": "dock",
+    "position": "bottom",
     "exclusive": true,
-    "height": 0,
+    "height": 45,
     "modules-left": [
         "clock",
 	    "hyprland/window"
@@ -20,13 +19,13 @@
     "modules-right": [
 	    "gamemode",
 	    "tray",
-        "network",
         "cpu",
 	    "memory",
         "temperature",
         "battery",
         "wireplumber",
-        "backlight"
+        "backlight",
+        "network"
     ],
 //--------------------------
 // Hyprland Window
@@ -41,7 +40,7 @@
 // Hyprland Workspaces
 //--------------------------
     "hyprland/workspaces": {
-        "active-only": false,
+        "disable-scroll": false,
         "all-outputs": true,
 	    "format": "{icon}",
         "on-scroll-up": "hyprctl dispatch workspace e+1",

@@ -1,6 +1,6 @@
 @define-color active rgba(204, 204, 204, 0.1);
-@define-color inactive rgba( 14, 14, 14, 0.70);
-@define-color back-color rgba(14,14,23,0.3);
+@define-color inactive rgba( 14, 14, 23, 0.80);
+@define-color back-color rgba(14, 14, 23, 0.3);
 @define-color back rgba( 14, 14, 23, 0.5); /* rgba(14, 14, 23, 0.55); */
 
 

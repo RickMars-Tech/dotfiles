@@ -1,4 +1,4 @@
-@define-color back rgba( 14, 14, 23, 0.75);
+@define-color back rgba( 14, 14, 23, 0.85);
 @define-color color #BBBBBB;
 @define-color borders #0E0E0E;
 @define-color inactives rgba(204, 204, 204, 0.3);
@@ -12,10 +12,16 @@
     font-family: "DaddyTimeMono", Mono;
     font-weight: Bold;
     font-size: 14px;
+    border: none;
 }
 
 window#waybar {
-    background-color: transparent;
+    background-color: @back;
+    color: @color;
+    transition-property: background-color;
+    transition-duration: .5s;
+    opacity: 0.8;
+    border-radius: 20px 20px 0px 0px;
 }
 
 
@@ -26,8 +32,6 @@ window#waybar {
 #workspaces button {
     padding: 4px 8px;
     color: @inactives;
-    margin-left: 1px;
-    margin-right: 1px;
 }
 
 #workspaces button.active {
@@ -87,11 +91,10 @@ tooltip {
 #memory,
 #gamemode,
 #tray {
-    padding: 0px 10px;
+    padding: 0 10px;
     color: @color;
-    background: @back;
-    margin: 3px 0px;
-    margin-top: 10px;
+    border: 1px solid rgba (0, 0, 0, 0);
+    background-clip: padding-box;
 }
 
 
@@ -101,21 +104,12 @@ tooltip {
 
 #window {
     color: @color;
-    background: @back;
-    border-radius: 0px 10px 10px 0px;
-    margin-left: 0px;
-    margin-right: 5px;
-    padding: 2px 10px 0px 10px;
-    font-size:16px;
-    font-weight:normal;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 #clock {
     color: @color;
-    background: @back;
-    border-radius: 10px 0px 0px 10px;
-    margin-right: 0px;
-    margin-left: 5px;
 }
 
 
@@ -125,16 +119,10 @@ tooltip {
 
 #workspaces {
     color: @color;
-    background: @back;
-    border-radius: 0px 10px 10px 0px;
-    margin-right: 2px;
 }
 
 #custom-nix {
     color: @color;
-    background: @back;
-    border-radius: 10px 0px 0px 10px;
-    margin-left: 5px;
 }
 
 
@@ -144,10 +132,6 @@ tooltip {
 
 #gamemode {
     color: @color;
-    background: @back;
-    border-radius: 10px;
-    margin-left: 2px;
-    margin-right: 2px;
 }
 
 /* -----------------------------------------------------
@@ -156,10 +140,6 @@ tooltip {
 
 #tray {
     color: @color;
-    background: @back;
-    border-radius: 10px;
-    margin-right: 2px;
-    margin-left: 2px;
 }
 
 
@@ -170,12 +150,6 @@ tooltip {
 
 #network {
     color: @color;
-    background: @back;
-    border-radius: 10px; 
-    border-left: 0px;
-    border-right: 0px;
-    margin-right: 2px;
-    margin-left: 2px;
 }
 
 
@@ -185,18 +159,10 @@ tooltip {
 
 #cpu {
     color: @color;
-    background: @back;
-    border-radius: 10px 0px 0px 10px;
-    margin-left: 2px;
-    margin-right: -1px;
 }
 
 #memory {
     color: @color;
-    background: @back;
-    border-radius: 0px 10px 10px 0px; 
-    margin-right: 2px;
-    margin-left: 0px;
 }
 
 /* -----------------------------------------------------
@@ -205,18 +171,10 @@ tooltip {
 
 #battery {
     color: @color;
-    background: @back;
-    border-radius: 0px 10px 10px 0px; 
-    margin-right: 2px;
-    margin-left: 0px;
 }
 
 #temperature {
     color: @color;
-    background: @back;
-    border-radius: 10px 0px 0px 10px;
-    margin-right: 0px;
-    margin-left: 2px;
 }
 
 
@@ -226,16 +184,8 @@ tooltip {
 
 #wireplumber {
     color: @color;
-    background: @back;
-    border-radius: 10px 0px 0px 10px;
-    margin-left: 2px;
-    margin-right: -1px;
 }
 
 #backlight {
     color: @color;
-    background: @back;
-    border-radius: 0px 10px 10px 0px; 
-    margin-right: 2px;
-    margin-left: 0px; 
 }
