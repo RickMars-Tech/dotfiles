@@ -22,6 +22,7 @@ window#waybar {
     transition-duration: .5s;
     opacity: 0.8;
     border-radius: 20px 20px 0px 0px;
+    padding: 3px;
 }
 
 
@@ -82,6 +83,7 @@ tooltip {
 #battery,
 #pulseaudio,
 #network,
+#bluetooth,
 #workspaces,
 #backlight,
 #wireplumber,
@@ -91,7 +93,7 @@ tooltip {
 #memory,
 #gamemode,
 #tray {
-    padding: 0 10px;
+    padding: 1px 10px;
     color: @color;
     border: 1px solid rgba (0, 0, 0, 0);
     background-clip: padding-box;
@@ -148,6 +150,7 @@ tooltip {
  * Network
  * ----------------------------------------------------- */
 
+#bluetooth,
 #network {
     color: @color;
 }

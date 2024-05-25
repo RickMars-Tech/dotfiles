@@ -8,13 +8,12 @@
     "height": 45,
     "modules-left": [
         "clock",
+        "custom/nix",
+        "hyprland/workspaces",
 	    "hyprland/window"
     ],
 
-    "modules-center": [
-        "custom/nix",
-        "hyprland/workspaces"
-    ],
+    "modules-center": [],
 
     "modules-right": [
 	    "gamemode",
@@ -25,6 +24,7 @@
         "battery",
         "wireplumber",
         "backlight",
+        "bluetooth",
         "network"
     ],
 //--------------------------
@@ -68,7 +68,7 @@
 //--------------------------
     "wireplumber": {
 	    "format": "{volume}% {icon}",
-	    "format-icons": ["󰖁","","","󰕾",""],
+	    "format-icons": ["","","󰕾",""],
 	    "on-click": "wpctl"
     },
 
@@ -142,11 +142,22 @@
 		"tooltip": false
 	},
 
+    "bluetooth": {
+	    "format": " {status}",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+	    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
+
 //--------------------------
 // Clock
 //--------------------------
     "clock": {
-      "format": " {:%I:%M}",
+      "format": "  {:%I:%M}",
       "format-alt": " {:%d/%m}",
       "tooltip": "true",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
@@ -179,8 +190,8 @@
 			"critical": 15
 		},
 		"format-time": "{H}:{M:02}",
-		"format": "{icon}  {capacity}% ({time})",
-		"format-charging": "󰂄 {capacity}% ({time})",
+		"format": "{icon}  {capacity}% ({time} Hrs)",
+		"format-charging": "󰂄 {capacity}% ({time} Hrs)",
 		"format-charging-full": " {capacity}%",
 		"format-full": "{icon} {capacity}%",
 		"format-alt": "{icon} {power}W",
